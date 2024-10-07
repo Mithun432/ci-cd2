@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan">
+      <stringProp name="TestPlan.comments">You can run me using: jmeter -Jthreads=&lt;Number of threads&gt; -Jrampup=&lt;rampup in seconds&gt; -Jduration=&lt;duration in seconds&gt; -Jiterations=&lt;Number of iterations, -1 means infinite&gt; -e -o &lt;report output folder&gt;</stringProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
+        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <longProp name="ThreadGroup.duration">1</longProp>
+        <longProp name="ThreadGroup.delay">5</longProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController">
+          <stringProp name="LoopController.loops">1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="uname" elementType="Argument">
+              <stringProp name="Argument.name">uname</stringProp>
+              <stringProp name="Argument.value">90000023</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="pswd" elementType="Argument">
+              <stringProp name="Argument.name">pswd</stringProp>
+              <stringProp name="Argument.value">SingHealth123!!</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="SAML" elementType="Argument">
+              <stringProp name="Argument.name">SAML</stringProp>
+              <stringProp name="Argument.value">pZJBb5wwFITv%2FRXIdwx2gnZlLUTbrKKslDYokB56ezFm8Qps6me2aX99gc0qiZKmh16tmW%2BeNbO6eOza4KAcamtSwmhMAmWkrbTZpeS%2BvAqX5CL7tELoWt6L9eAbc6d%2BDAp9sEZUzo%2B%2BS2tw6JQrlDtoqe7vblLSeN%2BjiCJsMPSjOsSfjX50hwWFkaGM1xImL4WeMdqAAWpNpTowFZW2i6bAqChuI2g14DsYWYeTlQSb8VmbGfYcC3XSc8Z%2FdxSktIPx%2BBbPI131EaL9l5oEV9ZJNX8%2BJTW0qEiw3aQEEh7v2ehZLpr9udqzapHETcJ3nCcPu%2BUowhwQ9UE92xAHtTXowfiU8JifhywOY1bGieBcnDG6TBbfSZA766207Wdtjl0MzggLqFEY6BQKL0Wx%2FnIjOI3Fw1GE4ros8zC%2FLUoSfDt1yqdOx5YNimOLH7P6p2CSHUsX88XuJeFjAJxmQbL%2FHMEqenlBdhrh1zFyu8ltq%2BWvqZkO%2FN8vYpTNL7oK61kqBoO9krrWqiJR9pTxetrZHw%3D%3D&amp;RelayState=cloudfoundry-uaa-sp&amp;SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256&amp;Signature=s6J0W0fkZYefS3NN26UMsURhKPCXAqvOHx6TCC%2FAlhhVpkz2QcBFfHPDJ8jjZ5aXdZhCTrGt4qAcIKOZNJVn%2BsqL9g8apWUWAi9I%2B5Eil2qba4TsMxd5vmCtKhwyzLQEAm8kBRrj5HvNI3vSTNQfueeT2La9mX%2F7vURp1YoReJnLguUe7jRULXJj%2BcfpiAOnQc19DpADoJs3dO6Lwm0mp4wpbWDsfTmtr5HCRruEZeoEc9y9GN7MtF6qTfgnck9irOa0%2BUDRMS8h8isueecnMeSu5IpJXzZIZfG9H0Yq5E6qu14lnPW0LwdW%2F3MyCkuXokvc%2BkVbSP539BLnNbddCQ%3D%3D  </stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="rly" elementType="Argument">
+              <stringProp name="Argument.name">rly</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP HeaderManager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="Accept-Language" elementType="Header">
+              <stringProp name="Header.name">Accept-Language</stringProp>
+              <stringProp name="Header.value">en-GB,en;q=0.9</stringProp>
+            </elementProp>
+            <elementProp name="Referer" elementType="Header">
+              <stringProp name="Header.name">Referer</stringProp>
+              <stringProp name="Header.value">https://shs-test-swhixrv7.authentication.ap11.hana.ondemand.com/</stringProp>
+            </elementProp>
+            <elementProp name="Sec-Fetch-Dest" elementType="Header">
+              <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+              <stringProp name="Header.value">document</stringProp>
+            </elementProp>
+            <elementProp name="Sec-Fetch-Mode" elementType="Header">
+              <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+              <stringProp name="Header.value">navigate</stringProp>
+            </elementProp>
+            <elementProp name="Sec-Fetch-Site" elementType="Header">
+              <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+              <stringProp name="Header.value">same-site</stringProp>
+            </elementProp>
+            <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+              <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+              <stringProp name="Header.value">1</stringProp>
+            </elementProp>
+            <elementProp name="User-Agent" elementType="Header">
+              <stringProp name="Header.name">User-Agent</stringProp>
+              <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.0.0</stringProp>
+            </elementProp>
+            <elementProp name="sec-ch-ua" elementType="Header">
+              <stringProp name="Header.name">sec-ch-ua</stringProp>
+              <stringProp name="Header.value">&quot;Microsoft Edge&quot;;v=&quot;129&quot;, &quot;Not=A?Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;129&quot;</stringProp>
+            </elementProp>
+            <elementProp name="sec-ch-ua-mobile" elementType="Header">
+              <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+              <stringProp name="Header.value">?0</stringProp>
+            </elementProp>
+            <elementProp name="sec-ch-ua-platform" elementType="Header">
+              <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+              <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">cookie</stringProp>
+              <stringProp name="Header.value">JSESSIONID=s%3A27LFbOreEG0CU0b5t8vB0Uxkz-WjawXv.bk9s1yQcxCcz%2FIUGSvO5qQBACGJRJnpZArn0SPYBSKw; __VCAP_ID__=9d9537ef-6531-4cc9-672f-f21d  </stringProp>
+            </elementProp>
+          </collectionProp>
+          <stringProp name="TestPlan.comments">Created from cURL on 2024-10-01T11:27:44.6455625</stringProp>
+        </HeaderManager>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller" enabled="true">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">true</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Before Request" enabled="true">
+            <stringProp name="TestPlan.comments">Created from cURL on 2024-10-01T11:27:44.6455625</stringProp>
+            <stringProp name="HTTPSampler.domain">af5p212zm.accounts.ondemand.com</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">/saml2/idp/sso/af5p212zm.accounts.ondemand.com</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="SAMLRequest" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">SAMLRequest</stringProp>
+                  <stringProp name="Argument.value">pZJBb5wwFITv/RXIdww2sLuyFqJtV1FXShsUSA+9vTUmWAKb8sw27a8vsFklVdr00Ks1882zZrZXj13rndSA2pqUMBoSTxlpK20eUnJfXvsbcpW92yJ0Le/FbnSNuVPfRoXO2yGqwU2+D9bg2KmhUMNJS3V/d5OSxrkeRRBgg76b1D5+b/TjcFpTmBjKOC1h9lLoGaMNGKDWVKoDU1Fpu2AODIriNoBWA/4BI2t/thJvPz1rs8CeY6FOes74z46ClHY0Dl/jeaCrPkC0/1IT79oOUi2fT0kNLSriHfYpgWjF15smqeV69VAlEd8co2hzZDGoZMX1JMIcEPVJPdsQR3Uw6MC4lPCQxz4L/ZCVYSJiLuKIJjH7Srx8sM5K277X5tzFOBhhATUKA51C4aQodp9uBKehOJ5FKD6WZe7nt0VJvC+XTvnc6dSyQXFu8W1W/xRMsnPpYrl4eEl4GwCXWZDsP0ewDV5ekF1G+HmKPOxz22r5Y26mA/f3ixhly4uu/HqRitFgr6SutapIkD1l/D7t7Bc=</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="RelayState" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">RelayState</stringProp>
+                  <stringProp name="Argument.value">cloudfoundry-uaa-sp</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="SigAlg" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">SigAlg</stringProp>
+                  <stringProp name="Argument.value">http://www.w3.org/2001/04/xmldsig-more#rsa-sha256</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="Signature" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">Signature</stringProp>
+                  <stringProp name="Argument.value">rMHIEWLqaGN1hpWfX/ZAfH5YkjHlCQpR0VyLLKyZSMgqnxZyKqDKUxZNH4s8/0Ak9pISnDUXfdIMBSwwXhvBVCWwYjYGDWwGj7cqhAy8+NnAr5B1OyQ2G19YdKkzTnexHkvDfI9VPXLQN+qMoRT6qIZfRbWeFgG+t7mdr+yorejhD8faHrGjbU/FJMCeNws5ad4p4EkWyAQ3kbXWP0SI1IMmbPLSe4/Aqfl+N8/gF91fU4Vt4elWSNzeMTj/HIFi2aykl2Jtvy05Mc0uGWqeCLq4642NJus8JaMMtxnejXRN4T5Iha6oBo/pS0eaqq2jO1xDF+Yyx0atYBfNUuxFQQ==</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Token Expression Extractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">SessionID</stringProp>
+              <stringProp name="RegexExtractor.regex">name=&quot;authenticity_token&quot; value=&quot;([^&quot;]+)&quot; </stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default">Not Found</stringProp>
+              <boolProp name="RegexExtractor.default_empty_value">false</boolProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="xsrf Expression Extractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">xsrf</stringProp>
+              <stringProp name="RegexExtractor.regex">name=&quot;xsrfProtection&quot; value=&quot;([^&quot;]+)&quot; </stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default">Not Found</stringProp>
+              <boolProp name="RegexExtractor.default_empty_value">false</boolProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Signature Extractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">signature</stringProp>
+              <stringProp name="RegexExtractor.regex">Signature=(.[^ &quot;]+</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default">Not Found</stringProp>
+              <boolProp name="RegexExtractor.default_empty_value">false</boolProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Login" enabled="true">
+            <stringProp name="TestPlan.comments">Created from cURL on 2024-10-01T11:46:31.8342306</stringProp>
+            <stringProp name="HTTPSampler.domain">af5p212zm.accounts.ondemand.com</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">/saml2/idp/sso/af5p212zm.accounts.ondemand.com?SAMLRequest=${SAML}</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">utf8=%E2%9C%93&amp;authenticity_token=${SessionID}&amp;xsrfProtection=${xsrf}Q&amp;method=GET&amp;idpSSOEndpoint=https%3A%2F%2Faf5p212zm.accounts.ondemand.com%2Fsaml2%2Fidp%2Fsso%2Faf5p212zm.accounts.ondemand.com&amp;SAMLRequest=pZJBb5wwFITv%2FRXIdww2sLuyFqJtV1FXShsUSA%2B9vTUmWAKb8sw27a8vsFklVdr00Ks1882zZrZXj13rndSA2pqUMBoSTxlpK20eUnJfXvsbcpW92yJ0Le%2FFbnSNuVPfRoXO2yGqwU2%2BD9bg2KmhUMNJS3V%2Fd5OSxrkeRRBgg76b1D5%2Bb%2FTjcFpTmBjKOC1h9lLoGaMNGKDWVKoDU1Fpu2AODIriNoBWA%2F4BI2t%2FthJvPz1rs8CeY6FOes74z46ClHY0Dl%2FjeaCrPkC0%2F1IT79oOUi2fT0kNLSriHfYpgWjF15smqeV69VAlEd8co2hzZDGoZMX1JMIcEPVJPdsQR3Uw6MC4lPCQxz4L%2FZCVYSJiLuKIJjH7Srx8sM5K277X5tzFOBhhATUKA51C4aQodp9uBKehOJ5FKD6WZe7nt0VJvC%2BXTvnc6dSyQXFu8W1W%2FxRMsnPpYrl4eEl4GwCXWZDsP0ewDV5ekF1G%2BHmKPOxz22r5Y26mA%2Ff3ixhly4uu%2FHqRitFgr6SutapIkD1l%2FD7t7Bc%3D&amp;RelayState=cloudfoundry-uaa-sp&amp;Signature=${signature}&amp;SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256&amp;targetUrl=&amp;sourceUrl=&amp;org=&amp;spId=64a54b064bcc7b55fdcfeb26&amp;spName=https%3A%2F%2Fshs-test-swhixrv7.authentication.ap11.hana.ondemand.com&amp;mobileSSOToken=&amp;tfaToken=&amp;css=SHS_SF_CSS&amp;passwordlessAuthnSelected=&amp;j_username=${uname}&amp;j_password=${pswd}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Home" enabled="true">
+            <stringProp name="TestPlan.comments">Created from cURL on 2024-10-01T16:13:52.8934811</stringProp>
+            <stringProp name="HTTPSampler.domain">ihis-pte-ltd-shs-hcm-be-app-qas.cfapps.ap11.hana.ondemand.com</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">/zshshcmapp-1.0.0/index.html</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Home (page.json) Request" enabled="true">
+            <stringProp name="TestPlan.comments">Created from cURL on 2024-10-03T12:15:13.7489237</stringProp>
+            <stringProp name="HTTPSampler.domain">ihis-pte-ltd-shs-hcm-be-app-qas.cfapps.ap11.hana.ondemand.com</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">/zshshcmapp-1.0.0/localfile/launchpad/Page.json</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
