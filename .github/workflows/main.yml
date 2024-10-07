@@ -30,7 +30,7 @@ jobs:
  
       - name: Run JMeter Tests
 
-        run: jmeter -n -t Task.jmx -l results/result.jtl -e -o html
+        run: jmeter -n -t Luma.jmx -l results/result.jtl -e -o html
  
       - name: List Results Directory
 
